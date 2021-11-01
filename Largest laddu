@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pb push_back
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int n,pu;
+		cin>>n;
+		vector<int> v;
+		for(int i=0;i<pow(2,n);i++)
+			{
+				cin>>pu;
+				v.pb(pu);		
+			}
+		int min=*min_element(v.begin(),v.end());
+		int max=*max_element(v.begin(),v.end());
+		
+		if(max-min<=1)
+			cout<<"YES"<<endl;
+			else
+				cout<<"NO"<<endl;
+			 	
+		
+		
+	}
+}
