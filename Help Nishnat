@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long int 
+int main()
+{
+	ll t;
+	cin>>t;
+	while(t--)
+	{
+		ll k,count=0;
+		cin>>k;
+		ll x=1,y=k;
+		while(x<=y)
+		{
+		ll val=(x+y)/2;
+		if((val*(val+1)/2)==k)
+		{
+			count=val;
+			break;
+		}
+		if((val*(val+1)/2)>k)
+			y=val-1;
+		else
+			x=val+1;
+		}
+		if(count==0)
+			cout<<x*2<<endl
+		else 
+    cout<<count*2<<endl;
+	}
+}
